@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Configure HashiCorp Vault on your system.
+  homepage: https://buluma.github.io/
+  topics: vaultconfiguration, security, ansible, molecule, tox, playbook

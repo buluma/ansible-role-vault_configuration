@@ -1,0 +1,21 @@
+---
+- name: Verify
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Initialize Vault
+      ansible.builtin.command:
+        cmd: vault operator init
+      environment:
+        VAULT_SKIP_VERIFY: "True"
+
+    - name: Use socket to check status
+      ansible.builtin.command:
+        cmd: vault status
+      environment:
+        VAULT_ADDR: "unix:///run/vault/vault.sock"
+      register: vault_socket
+      failed_when:
+        - vault_socket.stdout is not search("Initialized        true")
