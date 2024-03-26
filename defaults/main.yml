@@ -198,7 +198,7 @@ vault_configuration_storage_raft:
 #   session_ttl: "15s"
 #   lock_wait_time: "15s"
 
-# The "inmem" (Memory) storage stanza has no parameters. Use it by setting it to 'yes'.
+# The "inmem" (Memory) storage stanza has false parameters. Use it by setting it to 'true'.
 # NOT IMPLEMENTED.
 # vault_configuration_storage_inmem: true
 
