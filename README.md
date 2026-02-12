@@ -1,10 +1,10 @@
-# Ansible role [vault_configuration](https://galaxy.ansible.com/ui/standalone/roles/buluma/vault_configuration/documentation)
+# [Ansible role vault_configuration](#ansible-role-vault_configuration)
 
 Configure HashiCorp Vault on your system.
 
-|GitHub|Version|Issues|Pull Requests|Downloads|
-|------|-------|------|-------------|---------|
-|[![github](https://github.com/buluma/ansible-role-vault_configuration/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-vault_configuration/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-vault_configuration.svg)](https://github.com/buluma/ansible-role-vault_configuration/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-vault_configuration.svg)](https://github.com/buluma/ansible-role-vault_configuration/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-vault_configuration.svg)](https://github.com/buluma/ansible-role-vault_configuration/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/vault_configuration)](https://galaxy.ansible.com/ui/standalone/roles/buluma/vault_configuration/documentation)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/buluma/ansible-role-vault_configuration/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-vault_configuration/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-vault_configuration/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-vault_configuration)|[![downloads](https://img.shields.io/ansible/role/d/buluma/vault_configuration)](https://galaxy.ansible.com/buluma/vault_configuration)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-vault_configuration.svg)](https://github.com/buluma/ansible-role-vault_configuration/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -349,19 +349,18 @@ vault_configuration_storage_raft:
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
-| Requirement | GitHub | Version |
+| Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Ansible Molecule](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-bootstrap.svg)](https://github.com/shadowwalker/ansible-role-bootstrap)|
-|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Ansible Molecule](https://github.com/buluma/ansible-role-core_dependencies/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-core_dependencies.svg)](https://github.com/shadowwalker/ansible-role-core_dependencies)|
-|[buluma.hashicorp](https://galaxy.ansible.com/buluma/hashicorp)|[![Ansible Molecule](https://github.com/buluma/ansible-role-hashicorp/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-hashicorp/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-hashicorp.svg)](https://github.com/shadowwalker/ansible-role-hashicorp)|
-|[buluma.vault](https://galaxy.ansible.com/buluma/vault)|[![Ansible Molecule](https://github.com/buluma/ansible-role-vault/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-vault/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-vault.svg)](https://github.com/shadowwalker/ansible-role-vault)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Build Status GitHub](https://github.com/buluma/ansible-role-core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-core_dependencies)|
+|[buluma.hashicorp](https://galaxy.ansible.com/buluma/hashicorp)|[![Build Status GitHub](https://github.com/buluma/ansible-role-hashicorp/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-hashicorp/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-hashicorp/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-hashicorp)|
+|[buluma.vault](https://galaxy.ansible.com/buluma/vault)|[![Build Status GitHub](https://github.com/buluma/ansible-role-vault/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-vault/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-vault/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-vault)|
 
 ## [Context](#context)
 
-This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.github.io/) for further information.
+This role is part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.github.io/) for further information.
 
 Here is an overview of related roles:
-
 ![dependencies](https://raw.githubusercontent.com/buluma/ansible-role-vault_configuration/png/requirements.png "Dependencies")
 
 ## [Compatibility](#compatibility)
@@ -371,26 +370,23 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |[Debian](https://hub.docker.com/r/buluma/debian)|all|
-|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|8|
-|[Fedora](https://hub.docker.com/r/buluma/fedora)|38, 39|
+|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|all|
+|[Fedora](https://hub.docker.com/r/buluma/fedora)|all|
 |[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|all|
 
-The minimum version of Ansible required is 2.12, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done on:
 
 - The previous version.
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-vault_configuration/issues)
-
-## [Changelog](#changelog)
-
-[Role History](https://github.com/buluma/ansible-role-vault_configuration/blob/master/CHANGELOG.md)
+If you find issues, please register them on [GitHub](https://github.com/buluma/ansible-role-vault_configuration/issues).
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-vault_configuration/blob/master/LICENSE)
+[Apache-2.0](https://github.com/buluma/ansible-role-vault_configuration/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
-[Shadow Walker](https://buluma.github.io/)
+[buluma](https://buluma.github.io/)
+
