@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test vault_configuration_owner
   ansible.builtin.assert:
     that:
@@ -196,8 +195,7 @@
   ansible.builtin.assert:
     that:
       - item.http_write_timeout is not none
-      - item.http_write_timeout is string or
-        item.http_write_timeout is number
+      - item.http_write_timeout is string or item.http_write_timeout is number
     quiet: true
   loop: "{{ vault_configuration_listeners }}"
   loop_control:
@@ -700,7 +698,6 @@
     - vault_configuration_storage_raft is defined
     - vault_configuration_storage_raft.retry_join is defined
     - item.leader_ca_cert is defined
-
 
 - name: assert | Test item.leader_client_cert_file
   ansible.builtin.assert:

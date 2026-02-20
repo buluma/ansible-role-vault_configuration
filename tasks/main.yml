@@ -33,8 +33,7 @@
   when:
     - vault_configuration_storage_raft is defined
     - vault_configuration_storage_raft.retry_join is defined
-    - item.leader_ca_cert is defined or
-      item.leader_ca_cert_file is defined
+    - item.leader_ca_cert is defined or item.leader_ca_cert_file is defined
 
 - name: Place TLS key
   ansible.builtin.copy:
@@ -49,8 +48,7 @@
     label: "A hidden TLS key"
   when:
     - vault_configuration_listeners is defined
-    - item.tls_key is defined or
-      item.tls_key_file is defined
+    - item.tls_key is defined or item.tls_key_file is defined
   notify:
     - Reload Vault
 
@@ -69,8 +67,7 @@
     - Reload Vault
   when:
     - vault_configuration_listeners is defined
-    - item.tls_cert is defined or
-      item.tls_cert_file is defined
+    - item.tls_cert is defined or item.tls_cert_file is defined
 
 - name: Place Vault license
   ansible.builtin.copy:
