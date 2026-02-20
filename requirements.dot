@@ -1,0 +1,15 @@
+digraph PhiloDilemma {
+  label = "Michael Buluma" ;
+  overlap=false
+  {
+    "vault_configuration" [fillcolor=yellow style=filled penwidth=3]
+    "buluma.bootstrap" [fillcolor=green style=filled]
+    "buluma.core_dependencies" [fillcolor=green style=filled]
+    "buluma.hashicorp" [fillcolor=green style=filled]
+    "buluma.vault" [fillcolor=green style=filled]
+  }
+  "vault_configuration" -> "buluma.bootstrap"
+  "vault_configuration" -> "buluma.core_dependencies"
+  "vault_configuration" -> "buluma.hashicorp"
+  "vault_configuration" -> "buluma.vault"
+}
