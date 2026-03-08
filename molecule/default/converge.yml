@@ -4,4 +4,4 @@
   hosts: all
   name: Converge
   roles:
-  - role: buluma.vault_configuration
+    - role: buluma.vault_configuration
