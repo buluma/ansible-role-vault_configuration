@@ -44,8 +44,8 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
-vault_configuration_api_addr: https://{{ ansible_fqdn }}:8200
-vault_configuration_cluster_addr: https://{{ ansible_fqdn }}:8201
+vault_configuration_api_addr: "https://{{ ansible_fqdn }}:8200"
+vault_configuration_cluster_addr: "https://{{ ansible_fqdn }}:8201"
 vault_configuration_default_lease_ttl: 768h
 vault_configuration_disable_cache: false
 vault_configuration_disable_clustering: false
@@ -189,3 +189,4 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [buluma](https://buluma.github.io/)
+
