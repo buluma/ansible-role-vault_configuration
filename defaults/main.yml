@@ -1,6 +1,6 @@
 ---
-vault_configuration_api_addr: https://{{ ansible_fqdn }}:8200
-vault_configuration_cluster_addr: https://{{ ansible_fqdn }}:8201
+vault_configuration_api_addr: "https://{{ ansible_fqdn }}:8200"
+vault_configuration_cluster_addr: "https://{{ ansible_fqdn }}:8201"
 vault_configuration_default_lease_ttl: 768h
 vault_configuration_disable_cache: false
 vault_configuration_disable_clustering: false
