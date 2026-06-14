@@ -1,6 +1,6 @@
 ---
-vault_configuration_api_addr: "https://{{ ansible_fqdn }}:8200"
-vault_configuration_cluster_addr: "https://{{ ansible_fqdn }}:8201"
+vault_configuration_api_addr: "https://{{ ansible_facts.fqdn }}:8200"
+vault_configuration_cluster_addr: "https://{{ ansible_facts.fqdn }}:8201"
 vault_configuration_default_lease_ttl: 768h
 vault_configuration_disable_cache: false
 vault_configuration_disable_clustering: false
@@ -67,7 +67,7 @@ vault_configuration_storage_raft:
   autopilot_update_interval: 2s
   autopilot_upgrade_version: ""
   max_entry_size: 1048576
-  node_id: "{{ ansible_hostname }}"
+  node_id: "{{ ansible_facts.hostname }}"
   path: /opt/vault/data
   performance_multiplier: 0
   retry_join:
