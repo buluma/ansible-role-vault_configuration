@@ -1,15 +1,18 @@
 ---
 - become: true
   gather_facts: true
+- name: Verify
   hosts: all
   name: Verify
   tasks:
     - ansible.builtin.command:
+    changed_when: false
         cmd: vault operator init
       environment:
         VAULT_SKIP_VERIFY: "True"
       name: Initialize Vault
     - ansible.builtin.command:
+    changed_when: false
         cmd: vault status
       environment:
         VAULT_ADDR: unix:///run/vault/vault.sock
