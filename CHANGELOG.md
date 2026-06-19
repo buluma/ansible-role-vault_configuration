@@ -1,5 +1,9 @@
 # Changelog
 
+## [26.6.1](https://github.com/buluma/ansible-role-vault_configuration/tree/26.6.1) (2026-06-15)
+
+[Full Changelog](https://github.com/buluma/ansible-role-vault_configuration/compare/26.6.0...26.6.1)
+
 ## [26.6.0](https://github.com/buluma/ansible-role-vault_configuration/tree/26.6.0) (2026-06-14)
 
 [Full Changelog](https://github.com/buluma/ansible-role-vault_configuration/compare/ffa46855eafc7bdc0fbee43da324f30a73546bc2...26.6.0)
