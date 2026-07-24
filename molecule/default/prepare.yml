@@ -37,4 +37,8 @@
     - role: buluma.bootstrap
     - role: buluma.core_dependencies
     - role: buluma.hashicorp
-    - role: buluma.vault
+    # swapoff -a fails (rc 32) inside the docker test container - there's
+    # no swap to disable there, and disabling it is meaningless in a
+    # container anyway.
+    - vault_hardening_disable_swap: false
+      role: buluma.vault
