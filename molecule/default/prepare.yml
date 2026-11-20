@@ -1,4 +1,18 @@
 ---
+- name: Prepare TLS test material
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Create a throwaway self-signed certificate and key for the test run
+      ansible.builtin.command:
+        cmd: >-
+          openssl req -x509 -newkey rsa:2048 -nodes -days 2 -subj /CN=localhost
+          -keyout {{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/vault_tls.key
+          -out {{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/vault_tls.crt
+        creates: "{{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/vault_tls.key"
+
 - name: Prepare
   hosts: all
   become: true
