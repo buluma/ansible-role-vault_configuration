@@ -24,6 +24,20 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 
 ```yaml
 ---
+- name: Prepare TLS test material
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Create a throwaway self-signed certificate and key for the test run
+      ansible.builtin.command:
+        cmd: >-
+          openssl req -x509 -newkey rsa:2048 -nodes -days 2 -subj /CN=localhost
+          -keyout {{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/vault_tls.key
+          -out {{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/vault_tls.crt
+        creates: "{{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/vault_tls.key"
+
 - name: Prepare
   hosts: all
   become: true
@@ -62,7 +76,11 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
     - role: buluma.bootstrap
     - role: buluma.core_dependencies
     - role: buluma.hashicorp
-    - role: buluma.vault
+    # swapoff -a fails (rc 32) inside the docker test container - there's
+    # no swap to disable there, and disabling it is meaningless in a
+    # container anyway.
+    - vault_hardening_disable_swap: false
+      role: buluma.vault
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
