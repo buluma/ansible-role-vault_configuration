@@ -17,5 +17,5 @@
       environment:
         VAULT_ADDR: unix:///run/vault/vault.sock
       failed_when:
-        - vault_socket.stdout is not search("Initialized        true")
+        - vault_socket.stdout is not search("Initialized +true")
       register: vault_socket
